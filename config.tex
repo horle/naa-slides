@@ -9,7 +9,7 @@
 \newcolumntype{L}{>{\centering\raggedright\arraybackslash}X}
 \newcolumntype{C}{>{\centering\arraybackslash}X}
 
-\usepackage[firstinits=true,style=archaeologie,width=2cm,edby,backend=biber]{biblatex}
+\usepackage[style=archaeologie,width=2cm,edby,backend=biber]{biblatex}
 \addbibresource{naa.bib}
 \renewcommand*{\bibfont}{\small}
 
@@ -20,13 +20,13 @@
 \setbeamertemplate{footline}
 {
 \hbox{%
-  \begin{beamercolorbox}[wd=.28\paperwidth,ht=2.7ex,dp=1.2ex,center]{author in head/foot}%
+  \begin{beamercolorbox}[wd=.26\paperwidth,ht=2.7ex,dp=1.2ex,center]{author in head/foot}%
     \usebeamerfont{author in head/foot}\insertshortauthor\ (\insertshortinstitute)
   \end{beamercolorbox}%
-  \begin{beamercolorbox}[wd=.44\paperwidth,ht=2.7ex,dp=1.2ex,center]{author in head/foot}%
+  \begin{beamercolorbox}[wd=.40\paperwidth,ht=2.7ex,dp=1.2ex,center]{author in head/foot}%
     \usebeamerfont{title in head/foot}\insertshorttitle:\ \textbf{\insertsection}
   \end{beamercolorbox}%
-  \begin{beamercolorbox}[wd=.28\paperwidth,ht=2.7ex,dp=1.2ex,center]{author in head/foot}%
+  \begin{beamercolorbox}[wd=.36\paperwidth,ht=2.7ex,dp=1.2ex,center]{author in head/foot}%
     \usebeamerfont{date in head/foot}\insertshortdate\hfill\insertframenumber/\inserttotalframenumber\strut
   \end{beamercolorbox}}
   \vskip0pt%
@@ -40,7 +40,7 @@
   },
 }
 
-\newcommand{\printSectionYes}{\AtBeginSubsection[]
+\newcommand{\printSectionYes}{\AtBeginSection[]
 {
  \begin{frame}{Agenda}
  \tableofcontents[sectionstyle=show/shaded,

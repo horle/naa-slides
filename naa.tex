@@ -1,22 +1,20 @@
-\documentclass[xcolor=dvipsnames, aspectratio=169]{beamer}
+\documentclass[xcolor=x11names, aspectratio=169]{beamer}
 \usepackage[ngerman]{babel}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsfonts}
 \usepackage{mathpazo}
 \usepackage{enumerate}
+\usepackage{array,booktabs}
 \usepackage{tikz}
 \usepackage[version=4,arrows=pgf-filled]{mhchem}
 \usepackage{mathdots}
 \usepackage{multirow}
-\usepackage{booktabs}
 \usepackage{tabularx}
 \usetikzlibrary{matrix,backgrounds,patterns,arrows,decorations.markings,shapes}
 \usepackage{caption}
 
-\usetheme[titleformat title=regular,titleformat frame=regular,titleformat section=allcaps,numbering=fraction]{metropolis} 
-%\setsansfont[BoldFont={Fira Sans SemiBold}]{Fira Sans Book}
-%\setmonofont[Scale=1.1]{Ubuntu Mono}
+\usetheme[titleformat title=regular,titleformat frame=regular,titleformat section=allcaps,numbering=fraction]{metropolis}
 
 \mhchemoptions{mathfontcommand=\mathsf}
 
@@ -27,7 +25,7 @@
 \date[23.\ Juli 2016]{23.\ Juli 2016}
 
 \input{config.tex}
-\pgfdeclareimage[width=\columnwidth]{snucleus}{snucleus.eps}
+\pgfdeclareimage[width=\columnwidth]{snucleus}{img/snucleus.eps}
 \definecolor{morange}{HTML}{FF8200}
  
 \begin{document}
@@ -35,11 +33,13 @@
 \maketitle
 
 \begin{frame}[<+->]{Before we start \dots}
+\textbf{AGB:}
 \begin{itemize}
 \item Zu langsam/schnell/undeutlich? \textbf{Bitte meckern!}
 \item Fragen \alert{jederzeit} willkommen
 \item Du sollst keine anderen Editoren neben \texttt{vim} haben
-\item \LaTeX\ $\gg$ MS PowerPoint
+\item \LaTeX\ $\gg$ MS Word, PowerPoint, \dots
+\item Han shot first
 \end{itemize}
 \end{frame}
 
@@ -50,7 +50,7 @@
    	 ] 
 \end{frame}
 
-\section{Einordnung}\printSectionYes
+\section{Einordnung}%\printSectionYes
 
 \begin{frame}{Sinn und Zweck}
 \begin{quote}
@@ -63,19 +63,19 @@
 \end{frame}
 
 \begin{frame}{\dots\ in der Archäologie}
-Wir Archäologen nutzen NAA seit Jahrzehnten erfolgreich für
+\textbf{Wir Archäologen nutzen NAA seit Jahrzehnten erfolgreich für}
 \begin{itemize}
-\item die Bestimmung der \textbf{Herkunft} eines Objektes
-\item die Überprüfung der \textbf{Echtheit} eines fragwürdigen Gegenstandes
-\item Studien zur \textbf{Herstellung} und \textbf{Nutzung} von Artefakten
+\item die Bestimmung der \alert{Herkunft} eines Objektes
+\item die Überprüfung der \alert{Echtheit} eines fragwürdigen Gegenstandes
+\item Studien zur \alert{Herstellung} und \alert{Nutzung} von Artefakten
 \end{itemize}
 \end{frame}
 
 \begin{frame}{Herkunftsbestimmung}
-Wir treffen folgende wichtige Annahmen:
+\textbf{Wir treffen folgende wichtige Annahmen:}
 \begin{enumerate}[(i)]
 \item Kein Handel mit Rohton
-\item Bei hoher Präzision gilt ein Elementmuster als \textbf{charakteristisch} für einen Ort
+\item Bei hoher Präzision gilt ein Elementmuster als \alert{charakteristisch} für einen Ort
 \item Gefäße mit gleichem Elementmuster stammen vom selben Ort
 \item Das Muster veränderte sich nicht über die Zeit
 \end{enumerate}
@@ -84,7 +84,7 @@ Wir treffen folgende wichtige Annahmen:
 \begin{frame}{Herkunftsbestimmung}
 \begin{center}\Large
 \begin{tabularx}{.9\columnwidth}{rlCrl}
-\multirow{2}{*}{\parbox[c]{4.5em}{\includegraphics[scale=.6]{pot}}}&&&&\multirow{2}{*}{\parbox[c]{4.5em}{\includegraphics[scale=.6]{pot}}}\\
+\multirow{2}{*}{\parbox[c]{4.5em}{\includegraphics[scale=.6]{img/pot.png}}}&&&&\multirow{2}{*}{\parbox[c]{4.5em}{\includegraphics[scale=.6]{img/pot.png}}}\\
 &\vphantom{$\overset{?}{=}$}\only<2-3>{Herkunft$_A$&$\overset{?}{=}$&Herkunft$_B$}&\\
 &\onslide<3>{Muster$_A$&$=$&Muster$_B$}&\\
 \end{tabularx}
@@ -93,7 +93,7 @@ Wir treffen folgende wichtige Annahmen:
 \begin{frame}{Herkunftsbestimmung}
 \begin{center}\Large
 \begin{tabularx}{.9\columnwidth}{rlCrl}
-\multirow{2}{*}{\parbox[c]{4.5em}{\includegraphics[scale=.6]{pot}}}&&&&\multirow{2}{*}{\parbox[c]{4.5em}{\includegraphics[scale=.6]{pot}}}\\
+\multirow{2}{*}{\parbox[c]{4.5em}{\includegraphics[scale=.6]{img/pot.png}}}&&&&\multirow{2}{*}{\parbox[c]{4.5em}{\includegraphics[scale=.6]{img/pot.png}}}\\
 &\color{morange}\vphantom{$\overset{?}{=}$}Herkunft$_A$&\color{morange}\vspace*{-1em}$=$&\color{morange}Herkunft$_B$&\\
 &Muster$_A$&$=$&Muster$_B$&\\
 \end{tabularx}
@@ -103,13 +103,13 @@ Wir treffen folgende wichtige Annahmen:
 \begin{frame}{Herkunftsbestimmung}
 \textbf{Bekannte Herausforderungen:}
 \begin{itemize}[<+->]
-\item Nur selten wurde Rohton direkt verwendet.
+\item Nur selten wurde \alert{Rohton} direkt verwendet.
 
 \textit{Meist wurde er vor dem Töpfern gesäubert oder mit anderem Ton vermischt.}
-\item Variation bei der Aufbereitung führt zur Veränderung der Zusammensetzung.
+\item Variation bei der Aufbereitung führt zur \alert{Veränderung der Zusammensetzung}.
 
-\textit{Die Konzentrationswerte müssen relativ zueinander betrachtet werden.}
-\item Veränderungen durch Brand und Bodenlagerung für bestimmte Elemente.
+\textit{Es bedarf einer bekannten Referenzprobe.}
+\item Veränderungen durch \alert{Brand und Bodenlagerung} für bestimmte Elemente.
 
 \textit{Die betroffenen Elemente werden bei der Messung nicht berücksichtigt.}
 \item Messungenauigkeiten oder -fehler.
@@ -119,19 +119,19 @@ Wir treffen folgende wichtige Annahmen:
 \begin{frame}{Herkunftsbestimmung}
 \textbf{Problem mit Streuungen}
 
-Gewisse Streuungen (5--10\,\%) sind normal für Proben mit homogener Masse.
+Gewisse Streuungen (5--10\,\%) sind \alert{normal} für Proben mit homogener Masse.
 
-Zur Einteilung in Gruppen von Proben wollen wir nicht mehr als diesen Toleranzbereich zulassen, da sonst das zu \glqq diffuse\grqq\ Gesamtmuster eine Unterscheidung verschiedener Herkünfte stark erschwert.
+Zur Einteilung in Gruppen von Proben wollen wir nicht mehr als diesen Toleranzbereich zulassen, da sonst das \alert{zu \glqq diffuse\grqq\ Gesamtmuster} eine Unterscheidung verschiedener Herkünfte stark erschwert.
 \end{frame}
 
-\begin{frame}{Zuordnung: Muster $\mapsto$ Werkstatt, VLLT STREICHEN?!}
+\begin{frame}{Zuordnung: Muster $\mapsto$ Werkstatt}
 \begin{itemize}
-\item Schwerster Schritt.
-\item Notwendig: Finden von Referenzmaterial \textit{für jede Produktionsserie}.
+\item \textbf{Schwerster Schritt.}
+\item \textbf{Notwendig:} Finden von Referenzmaterial \textit{für jede Produktionsserie}.
 
 Dafür gut geeignet sind \alert{Fehlbrände} aus Abfallhaufen.\medskip\pause
 
-Alternativ: Logische Schlüsse anhand von \alert{Verteilungen}:
+\textit{Alternativ:} Logische Schlüsse anhand von \alert{Verteilungen}:
 
 Lokale Produktion genau dann, wenn chemisches Muster dort in großen Stückzahlen gefunden wurde (nicht nur Keramik)
 \end{itemize}
@@ -150,7 +150,8 @@ Lokale Produktion genau dann, wenn chemisches Muster dort in großen Stückzahle
 
 $\Rightarrow$ chemisch rein, z.\,B.\ synth.\ Saphir
 \item z.\,B.\ vom Boden der Keramik
-\item 80\,mg \textbf{Bohrstaub}
+\item Bohrtiefe 1--2\,mm
+\item 80\,mg \alert{Bohrstaub}
 \item \glqq nicht zerstörerisch\grqq
 \end{itemize}
 \end{minipage}\hfill
@@ -174,7 +175,7 @@ $\Rightarrow$ chemisch rein, z.\,B.\ synth.\ Saphir
 
 \begin{itemize}
 \item chemisch reines Bindemittel, z.\,B.\ Zellulose
-\item Herstellung einer \textbf{Tablette}
+\item Herstellung einer \alert{Tablette}
 \item Durchmesser von 10\,mm und Dicke von 1\,mm
 \item Feste Abmessungen wichtig für genaue Messung des $\gamma$-Spektrums!
 \end{itemize}
@@ -202,15 +203,31 @@ Als Neutronenquelle werden häufig \textbf{Kernreaktoren} benutzt.\smallskip
 \end{minipage}
 \end{frame}
 
-\begin{frame}[<+->]{Einschub: Grundbegriffe Kernphysik}
+\begin{frame}{Schritt 3: Neutronenbestrahlung}
+\begin{figure}
+\begin{minipage}{0.48\textwidth}
+\includegraphics[width=\textwidth]{img/control-1.jpg}
+\end{minipage}\hfill
+\begin{minipage}{0.48\textwidth}
+\includegraphics[width=\textwidth]{img/control-2.jpg}
+\end{minipage}
+\caption{Delft University of Technology, Kontrollraum.}
+\end{figure}\vspace*{-1em}
+\begin{center}
+\href{run:/home/felix/naa.asf}{VIDEO!}
+\end{center}
+\end{frame}
+
+\begin{frame}{Einschub: Grundbegriffe Kernphysik}
 \begin{enumerate}[(i)]
-\item \textbf{Protonen} $p$ sind positiv geladene Teilchen mit Masse 1
-\item \textbf{Neutronen} $n$ sind el.\ neutral geladene Teilchen mit Masse 1
-\item Protonen und Neutronen fassen wir als \textbf{Nukleonen} zusammen
-\item Protonenzahl (\textbf{Ordnungszahl}) $Z$ im Atomkern bestimmt das \emph{Element}
-\item Nukleonenzahl (\textbf{Massenzahl}) $A$ im Atomkern bestimmt die \emph{Atommasse}
-\item \textbf{Isotopen} sind Elemente mit unterschiedlicher Masse
-\item Wir schreiben für Element X: \[\text{\ce{^A_Z X}\quad oder kurz \quad\ce{^A X}}\]
+\item \alert{Protonen} $p$ sind positiv geladene Teilchen mit Masse 1
+\item \alert{Neutronen} $n$ sind el.\ neutral geladene Teilchen mit Masse 1
+\item Protonen und Neutronen fassen wir als \alert{Nukleonen} zusammen\pause
+\item Protonenzahl (\alert{Ordnungszahl}) $Z$ im Atomkern bestimmt das \emph{Element}
+\item Nukleonenzahl (\alert{Massenzahl}) $A$ im Atomkern bestimmt die \emph{Atommasse}\pause
+\item Wir schreiben für Element X: \[\text{\ce{^A_Z X}\quad oder kurz \quad\ce{^A X}}\]\pause\vspace*{-1.5em}
+\item \alert{Isotopen} sind Elemente mit unterschiedlicher Masse
+\item \alert{Halbwertszeit} $T_{1/2}$: Zeit, bis Hälfte des radioaktiven Stoffs zerfallen
 \end{enumerate}
 \end{frame}
 
@@ -239,6 +256,7 @@ Als Neutronenquelle werden häufig \textbf{Kernreaktoren} benutzt.\smallskip
 \includegraphics[height=.45\textheight]{img/nuclidchart.png}
 \caption{Ausschnitt der Nuklidkarte.}
 \end{figure}
+\vspace*{-1em}
 \[\large\text{\ce{^{58} Fe \:(n,$\gamma$)\: ^{59}Fe ->[$\beta^-$][$T_{1/2}=45d$] ^{59} Co^* ->[][sofort] ^{59} Co + $\gamma$}}\]
 \end{frame}
 
@@ -299,17 +317,17 @@ unserer Probe.
 \begin{frame}{Schritt 6: Mustervergleich}
 \textbf{Gruppenbildung (\textit{Clustering)}:}
 \begin{itemize}
-\item Jede Probe $s$ ist ein \alert{Punkt} in einem $n$-dimensionalen Raum: \[s=(c_1,c_2,\dots,c_n)\] wobei $c_i$ die Konzentration des $i$-ten Elements in der Probe ist.
+\item Jede Probe $s$ ist ein \alert{Punkt} in einem $n$-dimensionalen Raum: \[s=(c_1,c_2,\dots,c_n)\] wobei $c_i$ die Konzentration des $i$-ten Elements in der Probe ist.\pause
 \item Ähnlich zusammengesetzte Proben liegen in einer \alert{Punktwolke}.
 \item Finden von Punktwolken durch statistische Verfahren am Computer
 
-\textbf{$\Rightarrow$ äquivalent zum Gruppieren der Proben!}
+\alert{$\Rightarrow$ äquivalent zum Gruppieren der Proben!}
 \end{itemize}
 \end{frame}
 
 \begin{frame}{Schritt 6: Mustervergleich}
 \begin{minipage}{0.46\textwidth}\flushleft
-Die Hyperräume werden durch \textbf{Diskriminanzanalyse} auf eine zweidimensionale Fläche projiziert.\medskip	
+Die Hyperräume werden durch \alert{Diskriminanzanalyse} auf eine zweidimensionale Fläche projiziert.\medskip	
 
 Z.\,B.\ 3 Gruppen: Mittelpunkte der Wolken spannen Projektionsebene auf.\bigskip
 
@@ -326,9 +344,118 @@ Z.\,B.\ 3 Gruppen: Mittelpunkte der Wolken spannen Projektionsebene auf.\bigskip
 
 \section{Anwendungsbeispiel}
 
+\begin{frame}<1>[label=aegina]{Beispiel: Keramik aus Attika}
+\begin{minipage}{0.45\textwidth}\flushleft
+
+
+\textbf{Ausgangssituation:} Zuordnungen von 224 mykenischen Keramiken aus Attika.\medskip\pause
+
+\textbf{Problem:} Kein Referenzmaterial (z.\,B.\ Fehlbrände) vorhanden $\Rightarrow$ DB\medskip
+
+\textbf{Ergebnis:} Kochkeramik aus Aegina,
+sowie die meisten matt bemalten\medskip
+
+Hochwertige Keramik fast komplett aus Argolis\medskip
+
+\alert{$\Rightarrow$ Insg.\ 25\,\% importiert!}
+\end{minipage}\hfill
+\begin{minipage}{0.51\textwidth}
+\begin{figure}
+\includegraphics[width=.9\textwidth]{img/aegina.png}
+\caption{Gruppierungen aus Attika, Aegina, Argolis. \cite{mommsen2003}}
+\end{figure}
+\end{minipage}
+\end{frame}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{img/attica.pdf}}
+\begin{frame}[plain]
+\end{frame}
+}
+
+\againframe<2->{aegina}
+
+\begin{frame}{Beispiel: Keramik aus Attika}
+\begin{figure}
+\includegraphics[width=.85\textwidth]{img/table-1.png}
+\caption{Konzentrationswerte für Attika, Aegina, Argolis. \cite{mommsen2003}.}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Beispiel: Keramik aus Attika}
+\begin{figure}
+\includegraphics[width=.9\textwidth]{img/table-2.png}
+\caption{Konzentrationswerte für Attika, Aegina, Argolis. \cite{mommsen2003}.}
+\end{figure}
+\end{frame}
+
 \section{Einrichtungen}
 
-\section{Fazit}
+\begin{frame}{MURR}
+\begin{quote}
+``The internationally recognized \textbf{University of Missouri Research Reactor (MURR)}, a 10-megawatt facility, is the \alert{most powerful} among the dozens of research reactors located on our nation’s university campuses. 
+
+Even worldwide, few facilities can compare.''
+\end{quote}
+\vspace*{-2em}
+\begin{flushright}
+\href{www.murr.missouri.edu}{\texttt{www.murr.missouri.edu}}
+\end{flushright}\bigskip
+\end{frame}
+
+\begin{frame}{TRIGA: Reaktoren für die Lehre}
+\begin{figure}
+\includegraphics[height=.75\textheight]{img/triga.png}
+\caption{Standorte v.\ TRIGA Reaktoren außerhalb d.\ USA.}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Kosten}
+\begin{quote}
+``[\dots] we have a multi-element survey for \alert{\$\,495 per sample}. [\dots] This test requires approximately \alert{6 weeks} and the error is approximately 20\,\%.''
+\end{quote}
+\vspace*{-2em}
+\begin{flushright}
+-- General Activation Analysis, Inc., CA
+\end{flushright}\bigskip
+
+\href{http://www.tnw.tudelft.nl/en/cooperation/facilities/reactor-instituut-delft/services/inaa/pricelist/}{Delft University of Technology}
+\end{frame}
+
+\section{Ausblick}
+
+\begin{frame}{Ausblick}
+Schlecht: Forschungsreaktoren sind weltweit \alert{stark begrenzt} und \alert{teuer}.\pause
+
+\begin{center}
+\Large$\Rightarrow$ Bleibt die Daseinsberechtigung von NAA?
+\end{center}
+\end{frame}
+
+\begin{frame}{Ausblick}
+\begin{minipage}[t]{0.48\textwidth}\flushleft
+\textbf{JA}, denn NAA kann\ \dots\pause
+\begin{itemize}
+\item \alert{viele} Elemente \dots\pause
+\item in \alert{mehreren Proben} \dots\pause
+\item \alert{gleichzeitig} \dots\pause
+\item und vollkommen \alert{automatisch} \dots\pause
+\item mit \alert{hoher Sensitivität} messen!
+\end{itemize}
+\end{minipage}\pause
+\begin{minipage}[t]{0.48\textwidth}
+Es braucht dazu \glqq lediglich\grqq\ \dots
+\begin{itemize}
+\item eine \alert{geringe} Probenmenge
+
+(ca.\ 80\,mg)\pause
+\item einen Atomreaktor + Uran\pause
+\item Geld\pause
+\item und massig \alert{Zeit} ($>4$ Wochen) bis zum Ergebnis.
+\end{itemize}
+\end{minipage}
+\end{frame}
+
 \begin{frame}{Literatur}
 \nocite{*}
 
