@@ -39,7 +39,7 @@
 \item Zu langsam/schnell/undeutlich? \textbf{Bitte meckern!}
 \item Fragen \alert{jederzeit} willkommen
 \item Du sollst keine anderen Editoren neben \texttt{vim} haben
-\item \LaTeX\ > MS PowerPoint
+\item \LaTeX\ $\gg$ MS PowerPoint
 \end{itemize}
 \end{frame}
 
@@ -50,7 +50,7 @@
    	 ] 
 \end{frame}
 
-\section{Einordnung}
+\section{Einordnung}\printSectionYes
 
 \begin{frame}{Sinn und Zweck}
 \begin{quote}
@@ -75,8 +75,9 @@ Wir Archäologen nutzen NAA seit Jahrzehnten erfolgreich für
 Wir treffen folgende wichtige Annahmen:
 \begin{enumerate}[(i)]
 \item Kein Handel mit Rohton
-\item Bei hoher Präzision gilt ein Elementmuster als \alert{charakteristisch} für einen Ort
+\item Bei hoher Präzision gilt ein Elementmuster als \textbf{charakteristisch} für einen Ort
 \item Gefäße mit gleichem Elementmuster stammen vom selben Ort
+\item Das Muster veränderte sich nicht über die Zeit
 \end{enumerate}
 \end{frame}
 
@@ -118,7 +119,7 @@ Wir treffen folgende wichtige Annahmen:
 \begin{frame}{Herkunftsbestimmung}
 \textbf{Problem mit Streuungen}
 
-Gewisse Streuungen (5-10\%) sind normal für Proben mit homogener Masse.
+Gewisse Streuungen (5--10\,\%) sind normal für Proben mit homogener Masse.
 
 Zur Einteilung in Gruppen von Proben wollen wir nicht mehr als diesen Toleranzbereich zulassen, da sonst das zu \glqq diffuse\grqq\ Gesamtmuster eine Unterscheidung verschiedener Herkünfte stark erschwert.
 \end{frame}
@@ -136,52 +137,81 @@ Lokale Produktion genau dann, wenn chemisches Muster dort in großen Stückzahle
 \end{itemize}
 \end{frame}
 
-\section{Neutronenaktivierung}
+\section{Methode}
 
-\subsection{Grundlagen}\printSectionYes
-\begin{frame}[<+->]{Grundbegriffe Kernphysik}
+\subsection{Probenherstellung}
+
+\begin{frame}{Schritt 1: Probenentnahme}
+\begin{minipage}{0.56\textwidth}\flushleft
+\textbf{Entnahme der Probe vom Fundstück:}\smallskip
+
+\begin{itemize}
+\item mit Schaber o.\ Spitzbohrer
+
+$\Rightarrow$ chemisch rein, z.\,B.\ synth.\ Saphir
+\item z.\,B.\ vom Boden der Keramik
+\item 80\,mg \textbf{Bohrstaub}
+\item \glqq nicht zerstörerisch\grqq
+\end{itemize}
+\end{minipage}\hfill
+\begin{minipage}{0.4\textwidth}
+\begin{figure}
+\includegraphics[width=.8\textwidth]{img/drill.jpg}
+\caption{Entnahme der Probe, TRIGA Mainz.}
+\end{figure}
+\end{minipage}
+\end{frame}
+
+\begin{frame}{Schritt 2: Probenaufbereitung}
+\begin{minipage}{0.5\textwidth}
+\begin{figure}
+\includegraphics[width=\textwidth]{img/pill.jpg}
+\caption{Objekt mit Bohrer, Tablette und Probenhalter, Mommsen 2002.}
+\end{figure}
+\end{minipage}\hfill
+\begin{minipage}{.44\textwidth}\flushleft
+\textbf{Bohrstaub wird zur Probe:}\smallskip
+
+\begin{itemize}
+\item chemisch reines Bindemittel, z.\,B.\ Zellulose
+\item Herstellung einer \textbf{Tablette}
+\item Durchmesser von 10\,mm und Dicke von 1\,mm
+\item Feste Abmessungen wichtig für genaue Messung des $\gamma$-Spektrums!
+\end{itemize}
+\end{minipage}
+\end{frame}
+
+\subsection{Neutronenbestrahlung}
+
+\begin{frame}{Schritt 3: Neutronenbestrahlung}
+\begin{minipage}{0.52\textwidth}\flushleft
+Als Neutronenquelle werden häufig \textbf{Kernreaktoren} benutzt.\smallskip
+
+\begin{itemize}
+\item Spaltung von Uranisotopen\\$\Rightarrow$ therm.\ Neutronen mit $0,025$\,eV
+\item $10^{12}$ bis $10^{14}$ Neutronen pro Sekunde und cm$^2$
+\item Ein Durchgang für mehrere Proben gleichzeitig
+\item \alert{Referenztablette} mit bekannter Zusammensetzung
+\end{itemize}
+\end{minipage}\hfill
+\begin{minipage}{0.44\textwidth}
+\begin{figure}
+\includegraphics[width=\textwidth]{img/reactor-mainz.png}
+\caption{TRIGA Reaktor, Mainz.}
+\end{figure}
+\end{minipage}
+\end{frame}
+
+\begin{frame}[<+->]{Einschub: Grundbegriffe Kernphysik}
 \begin{enumerate}[(i)]
-\item \emph{Protonen} $p$ sind positiv geladene Teilchen mit Masse 1
-\item \emph{Neutronen} $n$ sind el.\ neutral geladene Teilchen mit Masse 1
-\item Protonen und Neutronen fassen wir als \emph{Nukleonen} zusammen
-\item Protonenzahl (\emph{Ordnungszahl}) $Z$ im Atomkern bestimmt das \emph{Element}
-\item Nukleonenzahl (\emph{Massenzahl}) $A$ im Atomkern bestimmt die \emph{Atommasse}
-\item Wir schreiben: \[\text{\ce{^A_Z Element}\quad oder kurz \quad\ce{^A Element}}\]
+\item \textbf{Protonen} $p$ sind positiv geladene Teilchen mit Masse 1
+\item \textbf{Neutronen} $n$ sind el.\ neutral geladene Teilchen mit Masse 1
+\item Protonen und Neutronen fassen wir als \textbf{Nukleonen} zusammen
+\item Protonenzahl (\textbf{Ordnungszahl}) $Z$ im Atomkern bestimmt das \emph{Element}
+\item Nukleonenzahl (\textbf{Massenzahl}) $A$ im Atomkern bestimmt die \emph{Atommasse}
+\item \textbf{Isotopen} sind Elemente mit unterschiedlicher Masse
+\item Wir schreiben für Element X: \[\text{\ce{^A_Z X}\quad oder kurz \quad\ce{^A X}}\]
 \end{enumerate}
-\end{frame}
-
-\begin{frame}{Erklärung am Beispiel}
-
-{\huge\begin{equation*}
-\text{\ce{^{14}_{6} C}}
-\end{equation*}}\bigskip
-
-Kohlenstoffisotop mit $14$ Nukleonen im Kern: $6$ Protonen und $14-6=8$ Neutronen.
-\end{frame}
-
-\begin{frame}[<+->]{Grundbegriffe Radioaktivität}
-\begin{enumerate}[(i)]
-\item Atomkerne teilt man in zwei Gruppen auf:
-\begin{enumerate}[(1)]
-\item Stabile Nuklide $\Rightarrow$ zerfallen \emph{nicht} von selbst
-\item Radionuklide $\Rightarrow$ instabil; Spontanzerfall, bis stabiler Zustand erreicht wird
-\end{enumerate}
-\item Produkte des Zerfalls bzw.\ der Spaltung:
-\begin{enumerate}[(a)]
-\item $\alpha$-Strahlung: Helium-Kerne (zwei Protonen, zwei Neutronen)
-\item $\beta$-Strahlung: Elektronen bei $\beta^-$, Positronen bei $\beta^+$
-\item $\gamma$-Strahlung: Photonen
-\end{enumerate}
-\end{enumerate}
-\end{frame}
-
-\subsection{Neutronenaktivierung}
-
-\begin{frame}{Neutronenaktivierung}
-\textbf{Prinzip:}
-\begin{center}
-Neutronen werden auf ein Objekt geschossen, dessen Atome dann\\ nach und nach angereichert und somit radioaktiv. Die Strahlung\\ gibt Aufschluss über die Elementkonzentration im Objekt.
-\end{center}
 \end{frame}
 
 \begin{frame}{Neutronenaktivierung}
@@ -197,57 +227,101 @@ Neutronen werden auf ein Objekt geschossen, dessen Atome dann\\ nach und nach an
 \node at (.4,-3.5) {\Large \ce{^{A+1}_{Z} X}};
 \node at (3.2,-3.5) {\Large \ce{^{A+1}_{Z±1} Y^*}};
 \node at (6.1,-3.5) {\Large \ce{^{A+1}_{Z±1} Y}};
-\node at (2.5,2) {\large $\beta^-$};
+\node at (2.5,2) {\large $\beta^\pm$};
 \node at (-0.7,-1.6) {\Large $\gamma$};
 \node at (4.9,-1.6) {\Large $\gamma$};
 \end{tikzpicture}
 \end{center}
 \end{frame}
 
-\begin{frame}{Neutronenaktivierung}
+\begin{frame}{Neutronenaktivierung: Beispiel}
 \begin{figure}
 \includegraphics[height=.45\textheight]{img/nuclidchart.png}
 \caption{Ausschnitt der Nuklidkarte.}
 \end{figure}
-\[\large\text{\ce{^{58} Fe_{(0,3\,\%)} (n,$\gamma$) ^{59}Fe ->[$\beta^-$][$T_{1/2}=45d$] ^{59} Co^* ->[][sofort] ^{59} Co + $\gamma$}}\]
+\[\large\text{\ce{^{58} Fe \:(n,$\gamma$)\: ^{59}Fe ->[$\beta^-$][$T_{1/2}=45d$] ^{59} Co^* ->[][sofort] ^{59} Co + $\gamma$}}\]
 \end{frame}
 
-\begin{frame}{Neutronenquelle}
-\begin{minipage}{0.52\textwidth}
-Als Neutronenquelle werden häufig \textbf{Kernreaktoren} benutzt.\smallskip
+\begin{frame}{Schritt 4: $\gamma$-Spektroskopie}
+\begin{minipage}{0.4\textwidth}\flushleft
+\textbf{Messung der $\gamma$-Aktivität der Probe} zum Zeitpunkt $t$.\medskip
 
-\begin{itemize}
-\item Spaltung von Uranisotopen\\$\Rightarrow$ therm.\ Neutronen mit $0,025$\,eV
-\item $10^{12}$ bis $10^{14}$ Neutronen pro Sekunde und cm$^2$
-\item Ein Durchgang für \alert{mehrere Proben gleichzeitig}
-\end{itemize}
+Messergebnis \alert{stark abhängig von $t$} wegen unterschiedlichen Halbwertszeiten, deswegen \textbf{mehrfach gemessen}!
 \end{minipage}\hfill
-\begin{minipage}{0.44\textwidth}
+\begin{minipage}{0.56\textwidth}
 \begin{figure}
-\includegraphics[width=\textwidth]{img/reactor-mainz.png}
-\caption{TRIGA Reaktor, Mainz.}
+\includegraphics[width=\textwidth]{img/spect-1.png}
+\caption{$\gamma$-Spektrum kurzlebiger El.\ einer Keramik-Probe, MURR.}
 \end{figure}
 \end{minipage}
 \end{frame}
 
-\begin{frame}{Detektoren}
-
+\begin{frame}{Schritt 4: $\gamma$-Spektroskopie}
+\begin{figure}
+\includegraphics[width=\textwidth]{img/spect-2.png}
+\caption{$\gamma$-Spektrum mittel- u.\ langlebiger El.\ einer Keramik-Probe, MURR.}
+\end{figure}
 \end{frame}
 
-\section{Datenauswertung}
+\subsection{Datenauswertung}
 
-\begin{frame}[<+->]{Gruppenbildung (\emph{Clustering})}
-\begin{enumerate}[(1)]
+\begin{frame}{Schritt 5: Datenauswertung und Konzentrationsbestimmung}
+\textbf{Wir haben gesehen:} Linien $\mapsto$ Elemente.
+\begin{itemize}
+\item 15--20 Linien aus Spektrum interessant
+\item Mehrfachmessung einer Linie zu unterschiedlichen Zeiten
+\item Korrekturen, z.\,B.\ bei Interferenzen und Überlappungen
+\end{itemize}\medskip\pause
+
+\textbf{Konzentrationsbestimmung:} Vergleich mit Referenzprobe!
+\begin{itemize}
+\item Jeweils Betrachtung eines Elements \textbf{in Probe und Referenz}:
+
+\begin{center}
+\alert{Intensitätsverhältnis $=$ Konzentrationsverhältnis}
+\end{center}
+
+(z.\,B.: Doppelte Linienstärke entspr.\ doppelter Konzentration)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Schritt 5: Datenauswertung und Konzentrationsbestimmung}
+\vspace*{-1em}
+\Large Als Ergebnis erhalten wir den
+\begin{huge}
+\begin{center}
+chemischen Fingerabdruck
+\end{center}
+\end{huge}
+unserer Probe.
+\end{frame}
+
+\begin{frame}{Schritt 6: Mustervergleich}
+\textbf{Gruppenbildung (\textit{Clustering)}:}
+\begin{itemize}
 \item Jede Probe $s$ ist ein \alert{Punkt} in einem $n$-dimensionalen Raum: \[s=(c_1,c_2,\dots,c_n)\] wobei $c_i$ die Konzentration des $i$-ten Elements in der Probe ist.
 \item Ähnlich zusammengesetzte Proben liegen in einer \alert{Punktwolke}.
 \item Finden von Punktwolken durch statistische Verfahren am Computer
 
 \textbf{$\Rightarrow$ äquivalent zum Gruppieren der Proben!}
-\end{enumerate}
+\end{itemize}
 \end{frame}
 
-\begin{frame}[<+->]{Gruppenbildung (\emph{Clustering}): Beispiel}
-Ermitteln von zweidimensionalen Bildern durch \emph{Diskriminanzanalyse} (anm: zB 3 gruppen: mittelpunkte d. wolken spannen ebene auf)
+\begin{frame}{Schritt 6: Mustervergleich}
+\begin{minipage}{0.46\textwidth}\flushleft
+Die Hyperräume werden durch \textbf{Diskriminanzanalyse} auf eine zweidimensionale Fläche projiziert.\medskip	
+
+Z.\,B.\ 3 Gruppen: Mittelpunkte der Wolken spannen Projektionsebene auf.\bigskip
+
+\begin{figure}
+\caption{Beispiel für Gruppierungen nach Diskriminanzanalyse.}
+\end{figure}
+\end{minipage}\hfill
+\begin{minipage}{0.5\textwidth}
+\begin{figure}
+\includegraphics[width=.8\textwidth]{img/groups.png}
+\end{figure}
+\end{minipage}
 \end{frame}
 
 \section{Anwendungsbeispiel}
@@ -255,7 +329,7 @@ Ermitteln von zweidimensionalen Bildern durch \emph{Diskriminanzanalyse} (anm: z
 \section{Einrichtungen}
 
 \section{Fazit}
-\begin{frame}[allowframebreaks]{Literatur}
+\begin{frame}{Literatur}
 \nocite{*}
 
 \printbibliography[heading=none]
